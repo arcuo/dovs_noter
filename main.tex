@@ -72,4 +72,43 @@
     \item Ocamllex: Lexer generator
 \end{itemize}
 
+\section{Parsing}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.35]{assets/cfg_def.png}
+    \caption{CFG Definition}
+    \label{fig:cfg}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.35]{assets/top-down_parsing_table.png}
+    \caption{Top-down parsing table. You do not want more than one possibility in a cell.}
+    \label{fig:top-down}
+\end{figure}
+
+\begin{itemize}
+    \item Abstract Syntax Tree (AST): 
+    \item Context-Free Grammars (CFG): 
+    \begin{itemize}
+        \item \textit{Terminals} $\rightarrow$ \textit{production rules}
+        \item Terminals are leafs in the tree (e.g. x, y).
+        \item Non-Terminals are links in the tree (e.g. BinExp)
+        \item Definition see figure \ref{fig:cfg}.
+        \item Ambiguity: You don't want ambiguity, you want determinism. \textit{Associativity} (right/left) and \textit{precedence} (e.g. times before plus).
+    \end{itemize}
+    \item Top-down/Bottom-up parsing:
+    \begin{itemize}
+        \item Top-down is predictive parsing:
+        \begin{itemize}
+            \item leftmost derivation
+            \item "see whats coming"
+            \item Breaks down at for example: $S$ $\rightarrow$ $S+x$ | $S-x$ | $x$. Here you don't know what to do when you see an $x\dots$
+            \item See figure \ref{fig:top-down} for parsing table.
+        \end{itemize}
+        \item Bottom-up: \textbf{LR parsing} is rightmost reduction.
+    \end{itemize}
+\end{itemize}
+
 \end{document}

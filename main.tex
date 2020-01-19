@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+
+\title{dOvs Eksamens Noter}
+\author{Hugh Benjamin Zachariae}
+\date{January 2020}
+
+\begin{document}
+
+\maketitle
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{phases.png}
+    \caption{Compiler modular phases.}
+    \label{fig:phase}
+\end{figure}
+
+\begin{itemize}
+    \item REG $\rightarrow$ NFA $\rightarrow$ (closures) DFA $\rightarrow$ Minimized DFA (more effective)
+    \item String $\rightarrow_{lexing}$ Tokens $\rightarrow_{parsing}$ Abstract Syntax Tree (AST)
+\end{itemize}
+
+\end{document}

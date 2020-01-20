@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.3)  20 JAN 2020 15:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.3)  20 JAN 2020 15:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -630,7 +630,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  40i,7n,50p,498b,638s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr17.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on d:/Desktop/Repos/dovs_noter\out/main.pdf (7 pages, 778784 bytes).
+Output written on d:/Desktop/Repos/dovs_noter\out/main.pdf (7 pages, 782048 bytes).
 PDF statistics:
  133 PDF objects out of 1000 (max. 8388607)
  106 compressed objects within 2 object streams

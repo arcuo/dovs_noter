@@ -86,5 +86,7 @@ Since LR(0) needs no lookahead, we require one action for each state. With shift
 
 LR(1) items consists of a \textit{grammar productio}n, a \textit{right-hand-side position} and a \textit{lookahead symbol}. Choose whether or not to reduce based on stack and one lookahead on input.\\
 
+Lookaheads are calculated by: Any state that contains an item of the form $A \rightarrow x.By\ \{t\}$, where $x$ and $y$ are arbitrary strings of terminals and nonterminals and $B$ is a nonterminal, you add an item of the form $B \rightarrow .w\ \{s\}$ for every production $B \rightarrow w$ and for every terminal in the set $s = FIRST(yt)$.
+
 
 

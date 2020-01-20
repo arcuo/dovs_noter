@@ -1,3 +1,5 @@
 \BOOKMARK [1][-]{section.1}{Compiler intro}{}% 1
 \BOOKMARK [1][-]{section.2}{Lexical}{}% 2
 \BOOKMARK [1][-]{section.3}{Parsing}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{LR parsing}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{LR\(k\)}{subsection.3.1}% 5

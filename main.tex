@@ -1,5 +1,7 @@
 \documentclass{article}
 
+\setlength{\parindent}{0em}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -15,6 +17,7 @@
 \usepackage{enumitem}
 \usepackage{wrapfig}
 \usepackage{listings}
+\usepackage{subfigure}
 
 \usepackage{chngcntr}
 
@@ -30,85 +33,22 @@
 
 \newpage
 
-\section{Compiler intro}
+\subfile{intro.tex}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{assets/phases.png}
-    \caption{Compiler modular phases.}
-    \label{fig:phase}
-\end{figure}
+\newpage
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{assets/bootstrap_compile.png}
-    \caption{Bootstrap compiling}
-    \label{fig:bootstrap}
-\end{figure}
+\subfile{lex.tex}
 
-\begin{itemize}
-    \item \textbf{Lexing/Parsing}: String $\rightarrow_{lexing}$ Tokens $\rightarrow_{parsing}$ Abstract Syntax Tree (AST)
-    \item \textbf{Elaboration}: \textit{Resolving scope }and \textit{Type checking}. Most errors found here.
-    \item \textbf{Lowering}: High-level features to target-language like constructs (e.g. assembly-like). \textit{Intermediate representation}, LLVM.
-    \item \textbf{Optimization}: Detect and rewrite expensive operations. Lifting invariants out of loops, parallelization.
-    \item \textbf{Code generation}: fx LLVM to X86 (registers, instruction etc.)
-    \item \textbf{Bootstrapping compilers}: Compile your language in your own language.
-\end{itemize}
+\newpage
 
-\section{Lexical}
+\subfile{parse.tex}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.4]{assets/reg_nfa_dfa.png}
-    \caption{REG to NFA to DFA}
-    \label{fig:reg}
-\end{figure}
+\newpage
 
-\begin{itemize}
-    \item Tokens: E.g. \textsc{ID}("a"), INT, IF etc. Some tokens include metadata like names in ID.
-    \item Non-tokens: comments, whitespace etc.
-    \item REG $\rightarrow$ NFA $\rightarrow$ (closures) DFA $\rightarrow$ Minimized DFA (more effective)
-    \item REG: Handle priorities and longest matching string token wins.
-    \item Ocamllex: Lexer generator
-\end{itemize}
+\subfile{sem.tex}
 
-\section{Parsing}
+\newpage
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.35]{assets/cfg_def.png}
-    \caption{CFG Definition}
-    \label{fig:cfg}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.35]{assets/top-down_parsing_table.png}
-    \caption{Top-down parsing table. You do not want more than one possibility in a cell.}
-    \label{fig:top-down}
-\end{figure}
-
-\begin{itemize}
-    \item Abstract Syntax Tree (AST): 
-    \item Context-Free Grammars (CFG): 
-    \begin{itemize}
-        \item \textit{Terminals} $\rightarrow$ \textit{production rules}
-        \item Terminals are leafs in the tree (e.g. x, y).
-        \item Non-Terminals are links in the tree (e.g. BinExp)
-        \item Definition see figure \ref{fig:cfg}.
-        \item Ambiguity: You don't want ambiguity, you want determinism. \textit{Associativity} (right/left) and \textit{precedence} (e.g. times before plus).
-    \end{itemize}
-    \item Top-down/Bottom-up parsing:
-    \begin{itemize}
-        \item Top-down is predictive parsing:
-        \begin{itemize}
-            \item leftmost derivation
-            \item "see whats coming"
-            \item Breaks down at for example: $S$ $\rightarrow$ $S+x$ | $S-x$ | $x$. Here you don't know what to do when you see an $x\dots$
-            \item See figure \ref{fig:top-down} for parsing table.
-        \end{itemize}
-        \item Bottom-up: \textbf{LR parsing} is rightmost reduction.
-    \end{itemize}
-\end{itemize}
+\subfile{llvm.tex}
 
 \end{document}

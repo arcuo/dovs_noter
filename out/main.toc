@@ -3,3 +3,4 @@
 \contentsline {section}{\numberline {3}Parsing}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}LR parsing}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Scoping rules}{7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Environments}{8}{subsubsection.3.2.1}%

@@ -116,6 +116,15 @@ Rules of programming language to regulate how names and ID's are resolved.\\
 \textbf{Tiger scoping and namespaces}:
 \begin{itemize}
     \item Global: base types (\texttt{int}, \texttt{string}) and built-in functions (e.g. \texttt{print}).
+    \item \texttt{let}, \texttt{function}, and \texttt{record} introduce name declarations.
+    \item Scoping follows SML, static, and lexical.
+    \item \texttt{FunctionDec}/\texttt{TypeDec} introduce mutual visibility to each uninterrupted group of declarations (e.g. gives mutual recursion).
 \end{itemize}
+
+\subsubsection{Environments}
+
+Symbol tables mapping names (\texttt{var} names to types, types to type decls, and functions to function specifications).\\
+
+Static, lexical scoping means that we need to update environments upon entering the scope and undo updates after leaving.
 
 

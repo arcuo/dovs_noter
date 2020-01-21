@@ -254,6 +254,9 @@ INPUT d:/texlive/2019/texmf-dist/tex/latex/lm/t1lmtt.fd
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/lm/ec-lmtt10.tfm
 INPUT sem.tex
 INPUT sem.tex
+INPUT assets/tigerlight_types.PNG
+INPUT ./assets/tigerlight_types.PNG
+INPUT ./assets/tigerlight_types.PNG
 INPUT llvm.tex
 INPUT llvm.tex
 INPUT d:\Desktop\Repos\dovs_noter\out/main.aux

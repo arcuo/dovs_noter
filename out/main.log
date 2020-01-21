@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.3)  21 JAN 2020 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.1.3)  21 JAN 2020 14:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -532,12 +532,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [1
 
 {d:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./intro.tex
-<assets/phases.png, id=50, 941.76843pt x 579.66562pt>
+<assets/phases.png, id=55, 941.76843pt x 579.66562pt>
 File: assets/phases.png Graphic file (type png)
 <use assets/phases.png>
 Package pdftex.def Info: assets/phases.png  used on input line 5.
 (pdftex.def)             Requested size: 376.7007pt x 231.86214pt.
-<assets/bootstrap_compile.png, id=51, 771.63281pt x 411.78844pt>
+<assets/bootstrap_compile.png, id=56, 771.63281pt x 411.78844pt>
 File: assets/bootstrap_compile.png Graphic file (type png)
 <use assets/bootstrap_compile.png>
 Package pdftex.def Info: assets/bootstrap_compile.png  used on input line 12.
@@ -549,18 +549,18 @@ File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 18.
  [2 <./assets/phases.png (PNG copy)> <./assets/bootstrap_compile.png (PNG copy)>]) [3] (./lex.tex
-<assets/reg_nfa_dfa.png, id=65, 926.71219pt x 423.83344pt>
+<assets/reg_nfa_dfa.png, id=70, 926.71219pt x 423.83344pt>
 File: assets/reg_nfa_dfa.png Graphic file (type png)
 <use assets/reg_nfa_dfa.png>
 Package pdftex.def Info: assets/reg_nfa_dfa.png  used on input line 5.
 (pdftex.def)             Requested size: 370.67831pt x 169.53036pt.
 ) [4 <./assets/reg_nfa_dfa.png (PNG copy)>] (./parse.tex
-<assets/cfg_def.png, id=72, 965.10562pt x 499.8675pt>
+<assets/cfg_def.png, id=77, 965.10562pt x 499.8675pt>
 File: assets/cfg_def.png Graphic file (type png)
 <use assets/cfg_def.png>
 Package pdftex.def Info: assets/cfg_def.png  used on input line 5.
 (pdftex.def)             Requested size: 337.79202pt x 174.95624pt.
-<assets/top-down_parsing_table.png, id=73, 990.70125pt x 494.59781pt>
+<assets/top-down_parsing_table.png, id=78, 990.70125pt x 494.59781pt>
 File: assets/top-down_parsing_table.png Graphic file (type png)
 <use assets/top-down_parsing_table.png>
 Package pdftex.def Info: assets/top-down_parsing_table.png  used on input line 12.
@@ -575,7 +575,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-<assets/parsingdfa_table.jpg, id=82, 1445.4pt x 609.27625pt>
+<assets/parsingdfa_table.jpg, id=87, 1445.4pt x 609.27625pt>
 File: assets/parsingdfa_table.jpg Graphic file (type jpg)
 <use assets/parsingdfa_table.jpg>
 Package pdftex.def Info: assets/parsingdfa_table.jpg  used on input line 72.
@@ -622,29 +622,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
-) [8] (./sem.tex) [9] (./llvm.tex)
+) [8] (./sem.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+<assets/tigerlight_types.PNG, id=107, 542.77782pt x 314.67563pt>
+File: assets/tigerlight_types.PNG Graphic file (type png)
+<use assets/tigerlight_types.PNG>
+Package pdftex.def Info: assets/tigerlight_types.PNG  used on input line 13.
+(pdftex.def)             Requested size: 271.38824pt x 157.33742pt.
+) [9 <./assets/tigerlight_types.PNG>] (./llvm.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
  (d:\Desktop\Repos\dovs_noter\out/main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AF309FE5357B71970FA0B4D0E3439D64;377.
+(rerunfilecheck)             Checksum: A9CBCA81B5FA18D9B00433C0EEF6244C;445.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 54.
  ) 
 Here is how much of TeX's memory you used:
- 11412 strings out of 492163
- 170173 string characters out of 6129077
- 290723 words of memory out of 5000000
- 15491 multiletter control sequences out of 15000+600000
+ 11423 strings out of 492163
+ 170420 string characters out of 6129077
+ 290818 words of memory out of 5000000
+ 15498 multiletter control sequences out of 15000+600000
  57065 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,7n,50p,500b,638s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{d:/texlive/2019/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr12.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmr17.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmri10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><d:/texlive/2019/texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on d:\Desktop\Repos\dovs_noter\out/main.pdf (9 pages, 811529 bytes).
+Output written on d:\Desktop\Repos\dovs_noter\out/main.pdf (9 pages, 850706 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 24 named destinations out of 1000 (max. 500000)
- 87 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 165 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 100 words of extra memory for PDF output out of 10000 (max. 10000000)
 

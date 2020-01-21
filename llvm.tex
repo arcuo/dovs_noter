@@ -1,0 +1,65 @@
+\section{LLVM Intermediate Representation}
+
+Using LLVM as a bridge from many high-level languages, to many low-level languages. Makes it so that we only have to make $n+m$ combinations from $n\times m$.\\
+
+\textbf{Low-level aspects}:
+
+\begin{itemize}
+    \item Convenient abstraction over architecture specific issues (we do not want to deal with.)
+    \begin{itemize}
+        \item Infinite registers (we do not care about exact purpose of registers)
+        \item Direction of stack growth
+        \item Calling convention
+        \item Exact instruction set
+    \end{itemize}
+    \item Exposes low-level aspects important for code gen:
+    \begin{itemize}
+        \item Notion of functions (call stack)
+        \item Allocation of stack during function execution
+        \item Storing and loading pointers (stack and heap locations)
+        \item Instructions for arithmetics
+        \item Instructions for jumps and conditional jumps
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{LLVM features}:
+
+\begin{itemize}
+    \item Intermediate assembly like
+    \item Infinite number of registers - can only be assigned to once (single static assignment)
+    \item Types
+    \begin{itemize}
+        \item First-class types*: 
+        \begin{itemize}
+            \item Single value: \textbf{integer}, float, x86\_mmx, \textbf{pointer}, vector, label
+            \item Aggregate types: \textbf{arrays}, \textbf{structures}
+        \end{itemize}
+        \item Function type and void type
+    \end{itemize}
+    \item Identifiers
+    \begin{itemize}
+        \item Global (@)
+        \item Local (\%)
+        \item LLVM-- only allows named identifiers
+    \end{itemize}
+    \item 
+\end{itemize}
+
+*\textit{Bold are used by us.}\\
+
+\subsubsection{Structure of LLVM}
+
+\begin{itemize}
+    \item Program:
+    \begin{itemize}
+        \item Global decls (list of globals, e.g. string literals)
+        \item Types: list of named types
+        \item Function decls
+    \end{itemize}
+    \item Function declaration: Header (param, return type), Control Flow Graph (Entry basic block + labeled basic blocks)
+    \item Control Flow Graph:
+    \begin{itemize}
+        \item Basic block: List of instructions + terminator
+        \item Terminator: Return or branch instruction
+    \end{itemize}
+\end{itemize}

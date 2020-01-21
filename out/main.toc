@@ -2,4 +2,4 @@
 \contentsline {section}{\numberline {2}Lexical}{4}{section.2}%
 \contentsline {section}{\numberline {3}Parsing}{5}{section.3}%
 \contentsline {subsection}{\numberline {3.1}LR parsing}{6}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}LR($k$)}{7}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Scoping rules}{7}{subsection.3.2}%

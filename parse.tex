@@ -76,9 +76,7 @@ Goto and shift must preserve the structure of the stack (item set > derivation).
 
 \textbf{Examples}: \href{https://users-cs.au.dk/~askarov/dovs/lr/}{All LR parsing examples}\\
 
-You can create a DFA by calculating first, the starting state and its closure. Then calculate the closures (dot in front of non-terminal) developed by shifting each terminal and non-terminal from that state (moving the dot after the shifted input symbol). Afterwards, you can develop a parsing table, \textit{state} by terminal/non-terminal. See figure \ref{shift/reduce} for parsing table, DFA for shift reduce grammar.
-
-\subsubsection{LR($k$)}
+You can create a DFA by calculating first, the starting state and its closure. Then calculate the closures (dot in front of non-terminal) developed by shifting each terminal and non-terminal from that state (moving the dot after the shifted input symbol). Afterwards, you can develop a parsing table, \textit{state} by terminal/non-terminal. See figure \ref{shift/reduce} for parsing table, DFA for shift reduce grammar.\\
 
 Reduction based on $k$ lookahead. The higher $k$, the less conflicts. However, more than 1 is not used for compilation, as the parsing table would be huge.\\
 
@@ -88,5 +86,36 @@ LR(1) items consists of a \textit{grammar productio}n, a \textit{right-hand-side
 
 Lookaheads are calculated by: Any state that contains an item of the form $A \rightarrow x.By\ \{t\}$, where $x$ and $y$ are arbitrary strings of terminals and nonterminals and $B$ is a nonterminal, you add an item of the form $B \rightarrow .w\ \{s\}$ for every production $B \rightarrow w$ and for every terminal in the set $s = FIRST(yt)$.
 
+
+\subsection{Scoping rules}
+Rules of programming language to regulate how names and ID's are resolved.\\
+
+\textbf{Problems}:
+
+\begin{itemize}
+    \item Nesting: Same name for variable in nested scopes. What value should we return?
+    \item Forward reference: Using something before it is declared. E.g. mutual recursion.
+\end{itemize}
+
+\textbf{Scoping terms}:
+
+\begin{itemize}
+    \item Scope of declaration: Part of the program where the declaration can be referred to.
+    \item \textbf{Static nested scopes (SML style)}: Identifier scope is the smallest block (begin/end, function, or procedure body) containing the identifier's declaration. This means that an identifier declared in some block is only accessible within that block and from procedures declared within it.
+    \begin{itemize}
+        \item Nearest visible: Return value of nearest declaration in the code.
+        \item Stack-like behavior
+        \item JS function-level lexical scoping: Inner functions contain the scope of parent functions even if the parent function has returned.
+    \end{itemize}
+    \item \textbf{Static scoping}: Inner functions can access identifiers in outer scope. Can be deduced in compile time (C).
+    \item \textbf{Dynamic scoping}: A function $p$ which prints $x$. Two functions, $d1$ and $d2$,that declare $x$ as 1 and 2 and then calls $p$. $d1$ will print 1 and $d2$ will print 2. I.e. the scope depends on the call stack and chain of function calls.
+\end{itemize}
+
+\textbf{Namespace}: Different declaration identifiers can reside in different syntactic namespaces. E.g. in Tiger: \textit{var/function} are in the same namespace, but \textit{type} is in another.
+
+\textbf{Tiger scoping and namespaces}:
+\begin{itemize}
+    \item Global: base types (\texttt{int}, \texttt{string}) and built-in functions (e.g. \texttt{print}).
+\end{itemize}
 
 

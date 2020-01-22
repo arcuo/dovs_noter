@@ -63,3 +63,50 @@ Using LLVM as a bridge from many high-level languages, to many low-level languag
         \item Terminator: Return or branch instruction
     \end{itemize}
 \end{itemize}
+
+\textbf{Conversion form Tiger to LLVM}:
+\begin{itemize}
+    \item\textit{Mutable values}: In LLVM we can only assign to a register once. Instead use \texttt{alloca} to allocate space on the stack and \texttt{store} the pointer. Then use \texttt{load} and \texttt{save} to read and update the variable.
+    \item \textit{Mutable values continued}: The number of locals is statically known and at compile time, traverse AST to create identifiers for each variable with pointer.
+    \item When compiling a function: Emit a bunch of \texttt{alloca}s for all the locals in the function first.
+    \item \textit{Nested functions}: Allocate all locals in record structure. Access locals and parent scope via GEP. Add static link to parent function as first argument in the function and first element in the locals structure.
+    \item \textit{Hoisting}: All functions are at the same level. Add variable/identifier offset (depth) to AST so that we can use it for GEP.
+    \item \textit{Conditionals}: Reserve return location and then store Then/Else bodies return there.
+    \item \textit{Allocation}: \texttt{alloca}s need to happen in the first basic block, so that they are not repeated, for example during a loop, growing the stack unnecessarily.
+    \item \textit{Records}: Nested records are flattened into \texttt{i8*} (pointer) and accessed via GEP. Records are allocated on the heap. The size is calculated via runtime C (\texttt{calloc}).
+    \item \textit{Arrays}: Same as for records (allocation, size and static links).
+\end{itemize}
+
+\subsection{Closure conversion}
+
+In functional programming a function passed as an argument is represented as a closure: Pointer and means of accessing non-local variables (free variables).
+
+\begin{lstlisting}
+    F = {fun*, env*}
+\end{lstlisting}    
+
+All functions are top-level and closed.\\
+
+Closure conversion phase in functional compiling transforms the functions so non of them appear to access free variables, turning all free variable access into formal parameter access.
+
+\begin{align*}
+    &f(a_1, a_2, \dots, a_n) = B \text{ at depth }d\\
+    &x_1, x_2, \dots, x_n \text{ are escaping local variables,}\\
+    &y_1, y_2, \dots, y_n \text{ are non-escaping local variables,}\\
+    &\text{rewrite into:}\\
+    & f(a_0, a_1, \dots, a_n) = \texttt{let var }r :=\{a_0, x_1, x_2, \dots, x_n\} \texttt{ in } B' \texttt{ end}
+\end{align*}
+
+\begin{itemize}
+    \item New parameter $a_0$ is the static link.
+    \item Variable $r$ is a record containing all escaping variables and the static link.
+    \item The variable $r$ becomes the static link argument when calling a function at depth $d+1$.
+    \item In LLVM, use the GEP function to access free variables in some offset of $r$.
+\end{itemize}
+
+These are called \textit{linked closures}. In immutable variable languages, just copy all closed values into closure instead of static link (\textit{flat closures}). \textit{Hybrid closures} are the best of both worlds.
+
+\subsubsection{First-class (Higher-order) functions}
+
+You can call a function, that has two arguments, with only one argument. It then return a function call variable, that you can call with the last argument. Closure conversion also hoists first-class functions into top-level and closed functions.
+

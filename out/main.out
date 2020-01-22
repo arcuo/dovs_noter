@@ -11,3 +11,7 @@
 \BOOKMARK [3][-]{subsubsection.5.0.2}{Structure of LLVM}{subsubsection.5.0.1}% 11
 \BOOKMARK [2][-]{subsection.5.1}{Closure conversion}{section.5}% 12
 \BOOKMARK [3][-]{subsubsection.5.1.1}{First-class \(Higher-order\) functions}{subsection.5.1}% 13
+\BOOKMARK [1][-]{section.6}{x86}{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Stack}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Registers}{section.6}% 16
+\BOOKMARK [1][-]{section.7}{Liveness Analysis}{}% 17

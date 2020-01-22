@@ -263,6 +263,26 @@ INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/lm/ec-lmr7.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/lm/ec-lmtt8.tfm
 INPUT d:/texlive/2019/texmf-dist/fonts/tfm/public/lm/ec-lmtt8.tfm
+INPUT x86.tex
+INPUT x86.tex
+INPUT assets/x86.PNG
+INPUT ./assets/x86.PNG
+INPUT ./assets/x86.PNG
+INPUT assets/stack.PNG
+INPUT ./assets/stack.PNG
+INPUT ./assets/stack.PNG
+INPUT assets/system V ABI.PNG
+INPUT ./assets/system V ABI.PNG
+INPUT ./assets/system V ABI.PNG
+INPUT assets/interference graph.PNG
+INPUT ./assets/interference graph.PNG
+INPUT ./assets/interference graph.PNG
+INPUT assets/liveness.PNG
+INPUT ./assets/liveness.PNG
+INPUT ./assets/liveness.PNG
+INPUT assets/liveness_example.PNG
+INPUT ./assets/liveness_example.PNG
+INPUT ./assets/liveness_example.PNG
 INPUT d:\Desktop\Repos\dovs_noter\out/main.aux
 INPUT d:/Desktop/Repos/dovs_noter/out/main.out
 INPUT d:/Desktop/Repos/dovs_noter/out/main.out
